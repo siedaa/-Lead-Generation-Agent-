@@ -12,7 +12,7 @@ def get_browser(playwright, headless=None):
 
 
 def search_bing_maps(page, query: str):
-    page.goto("https://www.bing.com/maps", timeout=30000)
+    page.goto("https://www.bing.com/maps", timeout=60000)
     page.wait_for_selector("#searchBoxInput", timeout=10000)
     page.fill("#searchBoxInput", query)
     page.press("#searchBoxInput", "Enter")
